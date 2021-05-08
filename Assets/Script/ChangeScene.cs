@@ -5,14 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-   public void OnClickStartButton()
-    {
-        if (OVRInput.GetDown(OVRInput.RawButton.A))
+    void Update(){
+        if (OVRInput.GetDown(OVRInput.Button.One))
         {
             Debug.Log("Aボタンを押した");
             SceneManager.LoadScene("BulletTrain");
         }
-        
-            
     }
 }
