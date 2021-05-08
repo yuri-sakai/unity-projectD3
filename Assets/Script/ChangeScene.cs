@@ -7,7 +7,12 @@ public class ChangeScene : MonoBehaviour
 {
    public void OnClickStartButton()
     {
-        SceneManager.LoadScene("BulletTrain");
+        if (OVRInput.GetDown(OVRInput.RawButton.A))
+        {
+            Debug.Log("Aボタンを押した");
+            SceneManager.LoadScene("BulletTrain");
+        }
+        
             
     }
 }
