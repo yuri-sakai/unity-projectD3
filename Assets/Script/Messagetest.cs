@@ -22,6 +22,9 @@ public class Messagetest : MonoBehaviour
         {
             Debugtext.text = "Abuttonをおした";
         }
+        string RtouchV3  = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch).ToString();
+        string LtouchV3  = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTouch).ToString();
+        Debugtext.text = "Debug"+"RtouchV3:"+ RtouchV3+"LtouchV3:"+LtouchV3;
         
     }
 }
