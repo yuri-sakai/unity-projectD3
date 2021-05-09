@@ -22,9 +22,11 @@ public class Messagetest : MonoBehaviour
         {
             Debugtext.text = "Abuttonをおした";
         }
-        string RtouchV3  = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch).ToString();
-        string LtouchV3  = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTouch).ToString();
+        Vector3 RtouchV3  = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch);
+        Vector3 LtouchV3  = OVRInput.GetLocalControllerPosition(OVRInput.Controller.LTouch);
         Debugtext.text = "Debug"+"RtouchV3:"+ RtouchV3+"LtouchV3:"+LtouchV3;
+        Debugtext.text = Vector3.SignedAngle(LtouchV3, RtouchV3,new Vector3(1, 1, 1)).ToString();
+        
         
     }
 }
